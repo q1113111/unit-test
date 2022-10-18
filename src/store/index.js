@@ -2,24 +2,25 @@
 import { createStore } from 'vuex'
 // Create a new store instance.
 
-const createVuexStore = (initialState) => {
-  const state = Object.assign({
-    count: 0
-  }, initialState)
-
+const createVuexStore = () => {
   return createStore({
-    state,
+    state () {
+      return {
+        count: 0
+      }
+    },
     getters: {
       count: state => state.count
     },
     mutations: {
       increment (state) {
         state.count += 1
+      },
+      setCount (state, value) {
+        state.count = value
       }
     }
   })
 }
 
-export default createVuexStore()
-
-export { createVuexStore }
+export default createVuexStore
