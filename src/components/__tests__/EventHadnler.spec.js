@@ -1,7 +1,15 @@
 import EvenHandler from '../EvenHandler.vue'
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
 
+/**
+ * beforeEach：在每個測試案例執行前呼叫一次
+   beforeAll：在所有測試案例執行前呼叫一次
+   afterEach：在每個測試案例執行後呼叫一次
+   afterAll：在所有測試案例執行後呼叫一次
+
+   resetTestingEnv() 清除測試
+ */
 describe('EvenHandling', () => {
   it('render button', () => {
     const wrapper = mount(EvenHandler)

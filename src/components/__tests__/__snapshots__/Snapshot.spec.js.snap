@@ -1,0 +1,26 @@
+// Vitest Snapshot v1
+
+exports[`cat snapshot 1`] = `
+[
+  {
+    "age": 4,
+    "name": "Orange",
+  },
+  {
+    "age": 6,
+    "name": "Blank",
+  },
+]
+`;
+
+exports[`snapshot 1`] = `
+DOMWrapper {
+  "isDisabled": [Function],
+  "wrapperElement": <a
+    data-test="link"
+    href="http://ithelp.ithome.com.tw"
+  >
+     Ithelp 
+  </a>,
+}
+`;
