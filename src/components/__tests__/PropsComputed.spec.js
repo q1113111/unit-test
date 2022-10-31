@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { beforeEach, describe, expect, it } from 'vitest'
 import PropsComputed from '../PropsComputed.vue'
-
+import Props from '../Props.vue'
 describe('Props & Computed', () => {
   let wrapper
   const minLength = 6
@@ -34,5 +34,17 @@ describe('Props & Computed', () => {
     // setProps(): 在 wrapper 生成後，動態的改變 props 的值。
     await wrapper.setProps({ showError: false })
     expect(wrapper.find('[data-test="errorMsg"').exists()).toBe(false)
+  })
+
+  it('setProps', async()=>{
+    expect(wrapper.get('[data-test="content"]').text()).toBe('hello') 
+    await wrapper.setProps({content:'Good bye'})
+    expect(wrapper.get('[data-test="content"]').text()).toBe('Good bye')
+  })
+
+  it('props components',()=>{
+    const propsWrapper = mount(Props)
+    // const target = propsWrapper.get(PropsComputed)
+    // expect(target.props(content)).toEqual('say hi')
   })
 })

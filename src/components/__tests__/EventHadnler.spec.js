@@ -48,5 +48,13 @@ describe('EvenHandling', () => {
     const incrementEvent = wrapper.emitted('increments')
     //  toEqual(): toEqual() 匹配器會去比較物件的所有屬性或陣列的所有元素是否相等。
     expect(incrementEvent[0]).toEqual([1])
+    expect(incrementEvent).toHaveLength(1)
+  })
+
+  it('should be display correct text', async () => {
+    const wrapper = mount(EvenHandler)
+    await wrapper.find('[data-test="leftButton"]').trigger('click.right')
+    expect(wrapper.find('[data-test="result"').text()).toBe('here we go!')
   })
 })
+

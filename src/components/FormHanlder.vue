@@ -51,7 +51,8 @@
         type="radio"
         value="monthly"
       >
-
+      <input data-test="radio_1" type="radio" v-model="form.radioResult" value="1" />
+      <input data-test="radio_2" type="radio" v-model="form.radioResult" value="2" />
       <button type="submit">
         Submit
       </button>
@@ -69,7 +70,8 @@ const form = reactive({
   description: '',
   city: '',
   subscribe: false,
-  interval: ''
+  radioResult:'',
+  interval: '',
 })
 
 const submit = () => {

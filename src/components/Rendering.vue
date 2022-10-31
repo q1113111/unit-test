@@ -16,8 +16,11 @@
     >
       <!-- dropdown content -->
     </ul>
-    <div data-test="target">
+    <div class="test ss" v-show="true" data-test="target">
       dataset
+    </div>
+    <div class="test" v-show="false" ref="isRef">
+      isRef
     </div>
   </nav>
 </template>
@@ -25,6 +28,7 @@
 import { ref } from 'vue'
 
 const admin = ref(true)
+const isRef = ref(true)
 const expandDropdown = ref(false)
 
 </script>

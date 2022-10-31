@@ -32,6 +32,7 @@ describe('FormHandler', () => {
     await wrapper.get('[data-test="description"]').setValue(description)
     await wrapper.get('[data-test="city"]').setValue(city)
     await wrapper.get('[data-test="subscribe"]').setValue()
+    await wrapper.get('[data-test="radio_1"]').setValue(true)
     await wrapper.get('[data-test="interval.weekly"]').setValue()
 
     // 在呼叫 setValue 的對象為 OPTION、CHECKBOX 或 RADIO 時， 如果沒有傳參數給 setValue 則表示為 checked 。
@@ -40,6 +41,7 @@ describe('FormHandler', () => {
       description,
       city,
       subscribe,
+      radioResult: "1",
       interval: 'weekly'
     })
   })
@@ -50,13 +52,12 @@ describe('FormHandler', () => {
     const description = 'Lorem ipsum dolor sit amet'
     const city = 'taipei'
     const subscribe = true
-
     await wrapper.get('[data-test="email"]').setValue(email)
     await wrapper.get('[data-test="description"]').setValue(description)
     await wrapper.get('[data-test="city"]').setValue(city)
     await wrapper.get('[data-test="subscribe"]').setValue(subscribe)
     await wrapper.get('[data-test="interval.monthly"]').setValue()
-
+    await wrapper.get('[data-test="radio_1"]').setValue(true)
     await wrapper.get('[data-test="form"]').trigger('submit.prevent')
 
     expect(wrapper.emitted('submit')[0][0]).toEqual({
@@ -64,6 +65,7 @@ describe('FormHandler', () => {
       description,
       city,
       subscribe,
+      radioResult:"1",
       interval: 'monthly'
     })
   })

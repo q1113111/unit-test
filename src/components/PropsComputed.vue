@@ -10,6 +10,7 @@
     >
       Password must be at least {{ minLength }} characters.
     </p>
+    <p data-test="content">{{content}}</p>
   </div>
 </template>
 <script setup>
@@ -23,6 +24,10 @@ const props = defineProps({
   showError: {
     type: Boolean,
     default: true
+  },
+  content:{
+     type: String,
+     default: 'hello'
   }
 })
 
