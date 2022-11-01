@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { beforeEach, describe, expect, it } from 'vitest'
 import PropsComputed from '../PropsComputed.vue'
-import Props from '../Props.vue'
+// import Props from '../Props.vue'
 describe('Props & Computed', () => {
   let wrapper
   const minLength = 6
@@ -43,7 +43,7 @@ describe('Props & Computed', () => {
   })
 
   it('props components',()=>{
-    const propsWrapper = mount(Props)
+    // const propsWrapper = mount(Props)
     // const target = propsWrapper.get(PropsComputed)
     // expect(target.props(content)).toEqual('say hi')
   })
