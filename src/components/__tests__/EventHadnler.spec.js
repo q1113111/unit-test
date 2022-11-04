@@ -57,4 +57,3 @@ describe('EvenHandling', () => {
     expect(wrapper.find('[data-test="result"').text()).toBe('here we go!')
   })
 })
-

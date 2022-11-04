@@ -15,6 +15,7 @@
   </header>
 
   <main>
+    <router-view></router-view>
     <TheWelcome />
   </main>
 </template>

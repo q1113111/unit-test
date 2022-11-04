@@ -7,19 +7,24 @@
     "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
     "test:update": "vitest -u",
+    "vitest:ui": "vitest --environment jsdom --ui",
+    "test:coverage": "vitest --environment jsdom --coverage",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "vue": "^3.2.38",
-    "vuex": "^4.1.0",
-    "lodash.clonedeep": "^4.5.0",
     "axios": "^0.21.4",
+    "lodash.clonedeep": "^4.5.0",
     "pinia": "^2.0.21",
-    "vue-router": "^4.1.5"
+    "vue": "^3.2.38",
+    "vue-router": "^4.1.5",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
+    "@pinia/testing": "^0.0.14",
     "@rushstack/eslint-patch": "^1.1.4",
     "@vitejs/plugin-vue": "^3.0.3",
+    "@vitest/coverage-c8": "^0.24.5",
+    "@vitest/ui": "^0.24.5",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/test-utils": "^2.0.2",
     "eslint": "^8.22.0",
