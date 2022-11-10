@@ -1,4 +1,4 @@
-import createVuexStore from '@/store'
+import {createVuexStore} from '@/store'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
 import Vuex from '../Vuex.vue'
@@ -8,6 +8,7 @@ const factory = () => {
   return mount(Vuex, {
     global: {
       plugins: [store]
+            // plugins: [createVuexStore({ count: 10 })]
     }
   })
 }

@@ -23,4 +23,5 @@ const createVuexStore = () => {
   })
 }
 
-export default createVuexStore
+export default createVuexStore()
+export { createVuexStore }
