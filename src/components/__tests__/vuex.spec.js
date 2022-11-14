@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest'
 import Vuex from '../Vuex.vue'
 
 const factory = () => {
-  const store = createVuexStore()
+  const store = createVuexStore({ count: 10 })
   return mount(Vuex, {
     global: {
       plugins: [store]
@@ -13,12 +13,12 @@ const factory = () => {
   })
 }
 describe('Test Component with vuex', () => {
-  it('After clicked, value of count will become 0 to 1', async () => {
+  it.only('After clicked, value of count will become 0 to 1', async () => {
     const wrapper = factory()
-    expect(wrapper.text()).toContain('Count: 0')
+    expect(wrapper.text()).toContain('Count: 10')
 
     await wrapper.get('[data-test="increment"]').trigger('click')
-    expect(wrapper.text()).toContain('Count: 1')
+    expect(wrapper.text()).toContain('Count: 11')
   })
 
   it('The initial value of count is 0', async () => {
