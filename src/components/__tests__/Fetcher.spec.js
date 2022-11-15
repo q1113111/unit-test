@@ -6,10 +6,16 @@ const mockGet = vi.fn()
 
 mockGet('@/api/request.js')
 
-it.only('makes an api call', async () => {
+it('makes an api call', async () => {
   const wrapper = mount(Fetcher)
   await wrapper.find('.btn').trigger('click'); // 触发click事件
-  // await flushPromises()// 等待异步完成
   expect(mockGet).toHaveBeenCalled()
   expect(wrapper.find('.name').text()).toBe('李四');
+})
+
+it('makes an api2 call', async () => {
+  const wrapper = mount(Fetcher)
+  await wrapper.find('.btn2').trigger('click'); // 触发click事件
+  expect(mockGet).toHaveBeenCalled()
+  expect(wrapper.find('.name').text()).toBe('456四');
 })
