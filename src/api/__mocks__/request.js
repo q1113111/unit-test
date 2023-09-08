@@ -11,6 +11,10 @@ export const getList2 = () => new Promise(resolve => {
         data: { name: '456四' }
     });
 })
-export const getApi = () =>{
-    return axios.get('https://ppt.cc/f7TqBx')
-}
+
+
+export const getApi = () => new Promise(resolve => {
+    resolve({
+        data: { name: '456四api' }
+    });
+})

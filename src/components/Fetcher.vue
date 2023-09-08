@@ -16,7 +16,7 @@ const clickHandler = async()=>{
   name.value = res.data.name;
 }
 const clickHandler2 = async()=>{
-  const res = await getList2();
- name.value = res.data.name;
+  const res = await getApi();
+ name.value = res.data;
 }
 </script>
