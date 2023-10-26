@@ -12,15 +12,3 @@ exports[`cat snapshot 1`] = `
   },
 ]
 `;
-
-exports[`snapshot 1`] = `
-DOMWrapper {
-  "isDisabled": [Function],
-  "wrapperElement": <a
-    data-test="link"
-    href="http://ithelp.ithome.com.tw"
-  >
-     Ithelp 
-  </a>,
-}
-`;

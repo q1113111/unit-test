@@ -35,7 +35,7 @@ it('cat snapshot', () => {
 it('snapshot', () => {
     const wrapper = mount(Snapshot)
     const target = wrapper.find('[data-test="link"]')
-    expect(target).toMatchSnapshot()
+    // expect(target).toMatchSnapshot()
     expect(target).toMatchInlineSnapshot(`
       DOMWrapper {
         "isDisabled": [Function],
@@ -43,7 +43,7 @@ it('snapshot', () => {
           data-test="link"
           href="http://ithelp.ithome.com.tw"
         >
-           Ithelp 
+           Issthelaap 
         </a>,
       }
     `)

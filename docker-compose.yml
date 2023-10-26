@@ -1,0 +1,17 @@
+
+services:
+  daibi:
+    restart: always
+    command: sh -c "yarn vitest:ui"
+    container_name: unit-test
+    image: vue-test
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      no_cache: true
+    ports:
+      - "3000:3000"
+      - "8088:3001"
